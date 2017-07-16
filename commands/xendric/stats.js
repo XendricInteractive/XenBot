@@ -1,10 +1,5 @@
 const commando = require('discord.js-commando');
 const discord = require('discord.js');
-const bot = new commando.Client({
-    commandPrefix: 'x//'
-});
-
-const embed = new discord.RichEmbed().setTitle("XenBot Statistics").addField("Servers", `${bot.guilds.size}`, true).addField("Users", `${bot.users.size}`, true).addField("Command Prefix", `${bot.commandPrefix}`, true);
 
 module.exports = class StatsCommand extends commando.Command{
     constructor(client ){
@@ -18,6 +13,7 @@ module.exports = class StatsCommand extends commando.Command{
     }
 
     async run(message, args){
+        const embed = new discord.RichEmbed().setTitle("XenBot Statistics").addField("Servers", `${this.client.guilds.size}`, true).addField("Users", `${this.client.users.size}`, true).addField("Command Prefix", `${this.client.commandPrefix}`, true);
         message.channel.send({embed});
     }
 }
