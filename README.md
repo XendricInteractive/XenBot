@@ -1,5 +1,5 @@
 # XenBot
-Xendric's Discord bot. Woo.
+Xendric's Discord bot. Woo. Uptime of this bot is like 2% lol.
 
 XenBot is a bot made by Xendric Interactive, more specifically by the lead programmer *MCE626*. The bot is for getting user profile stats from Xendric's games (When the time comes).
 
