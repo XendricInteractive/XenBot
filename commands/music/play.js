@@ -1,16 +1,17 @@
 const commando = require('discord.js-commando');
+const music = require('discord.js-music');
 
 module.exports = class MusicCommand extends commando.Command{
     constructor(client ){
         super(client, {
-            name: 'music',
-            group: 'random',
-            memberName: 'music',
-            description: 'Music!'
+            name: 'play',
+            group: 'music',
+            memberName: 'play',
+            description: 'Play a song!'
         });
     }
 
     async run(message, args){
-       message.channel.send("WIP");
+       music(client);
     }
 }
