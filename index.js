@@ -4,7 +4,7 @@ const bot = new commando.Client({
 });
 
 bot.on("ready", () => {
-    bot.user.setGame("xendric.net");
+    bot.user.setGame("x//help");
 });
 
 bot.registry.registerGroup('random', 'Random');

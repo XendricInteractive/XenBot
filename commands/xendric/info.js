@@ -1,7 +1,10 @@
 const commando = require('discord.js-commando');
 const discord = require('discord.js');
+const fs = require('fs');
 
-const embed = new discord.RichEmbed().setTitle("XenBot Info").addField("Developer", "**__Xendric Interactive__**\n*MCE626* - Lead Programmer\n*Guybto1001* - Graphic Artist", true).addField("Framework", "discord.js\ndiscord.js-commando", true).addField("Language", "JavaScript", true).addField("Bot Version", "0.0.5", true).addField("Bot Prefix", "x//", true);
+let version = JSON.parse(fs.readFileSync("./package.json","utf8"));
+
+const embed = new discord.RichEmbed().setTitle("XenBot Info").addField("Developers", "**__Xendric Interactive__**\n*MCE626* - Lead Programmer\n*Guybto1001* - Graphic Artist", true).addField("Framework", "discord.js\ndiscord.js-commando", true).addField("Language", "JavaScript", true).addField("Bot Version", version.version, true).addField("Bot Prefix", "x//", true);
 
 module.exports = class AboutBotCommand extends commando.Command{
     constructor(client ){
