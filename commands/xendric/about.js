@@ -11,8 +11,8 @@ module.exports = class AboutCommand extends commando.Command{
         });
     }
 
-    async run(msg, args){
-        msg.say("Xendric Interactive is a newly formed game development company. They are working on games.");
-        msg.say("If you wanted to know about XenBot, type *.aboutbot*");
+    async run(message, args){
+        message.channel.send("Xendric Interactive is a newly formed game development company. They are working on games.");
+        message.channel.send("If you wanted to know about XenBot, type *.info*");
     }
 }

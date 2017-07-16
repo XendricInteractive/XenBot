@@ -1,4 +1,7 @@
 const commando = require('discord.js-commando');
+const discord = require('discord.js');
+
+const embed = new discord.RichEmbed().setTitle("XenBot Todo List:").addField("**Misc**","- Music!\n- Get SteamWars Image command working..\n- Maybe more ~~fun~~ random things?").addField("**Xendric**","- Get profile stats from Xendric Interactive games (When the time comes).\n- IDK, other stuff for this game company.\n- Add FAQ link command.");
 
 module.exports = class TodoCommand extends commando.Command{
     constructor(client ){
@@ -11,8 +14,7 @@ module.exports = class TodoCommand extends commando.Command{
         });
     }
 
-    async run(msg, args){
-        msg.say("Here's a todo list of stuff to add to XenBot:");
-        msg.say("\n- Music!\n- Get profile stats from Xendric Interactive games (When the time comes).\n- Get SteamWars Image command working..\n- Maybe more ~~fun~~ random things?");
+    async run(message, args){
+        message.channel.send({embed});
     }
 }

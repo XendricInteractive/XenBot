@@ -14,9 +14,9 @@ module.exports = class SWICommand extends commando.Command{
 
    
 
-    async run(msg){
+    async run(message){
         var roll = Math.floor(Math.random() * 6) + 1;
         const {body} = await snekfetch.get('http://xendric.net/assets/sw/' + roll + '.png');
-        msg.say(body.file);
+        message.channel.send(body.file);
     }
 }

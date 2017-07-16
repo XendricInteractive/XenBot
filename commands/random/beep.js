@@ -10,7 +10,7 @@ module.exports = class BeepCommand extends commando.Command{
         });
     }
 
-    async run(msg, args){
-        msg.say("Boop.");
+    async run(message, args){
+       message.channel.send("Boop.");
     }
 }

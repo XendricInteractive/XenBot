@@ -11,7 +11,7 @@ module.exports = class SteamWarsCommand extends commando.Command{
         });
     }
 
-    async run(msg, args){
-        msg.say("http://xendric.net/steamwars");
+    async run(message, args){
+        message.channel.send("http://xendric.net/steamwars");
     }
 }

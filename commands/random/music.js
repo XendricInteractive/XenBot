@@ -10,7 +10,7 @@ module.exports = class MusicCommand extends commando.Command{
         });
     }
 
-    async run(msg, args){
-        msg.say("WIP");
+    async run(message, args){
+       message.channel.send("WIP");
     }
 }

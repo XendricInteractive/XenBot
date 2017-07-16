@@ -5,7 +5,7 @@ XenBot is a bot made by Xendric Interactive, more specifically by the lead progr
 
 For now, it's just a basic random bot as MCE626 learns more javascript and coding a discord bot. This bot is coded in Discord.js and Discord.js-commando.
 
-The prefix for this bot is "."
+The prefix for this bot is "/"
 
 Example: .roll
 
