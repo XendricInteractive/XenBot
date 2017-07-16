@@ -14,7 +14,6 @@ Example: x//roll
 - Get profile stats from Xendric Interactive games (When the time comes)
 - Get SteamWars Image command working..
 - Maybe more ~~fun~~ random things?
-- Add FAQ link command
 
 ## Commands List:
 
@@ -31,3 +30,4 @@ Example: x//roll
 - swi (steamwarsimage, swimage, swimg, steamwarsimg): Get a random image from the SteamWars webpage on xendric.net (WIP)
 - todo (upcoming, wip, wipfeatures): A list of stuff to add to XenBot.
 - stats (stat): Gets some stats about XenBot.
+- faq: Gives the FAQ link.
