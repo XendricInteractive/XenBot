@@ -4,7 +4,7 @@ module.exports = class SteamWarsCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'steamwars',
-            aliases: ['giftingwars', 'giftwars'],
+            aliases: ['giftingwars', 'giftwars', 'sw'],
             group: 'xendric',
             memberName: 'steamwars',
             description: 'About the SteamWars.'
