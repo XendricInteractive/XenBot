@@ -5,15 +5,16 @@ XenBot is a bot made by Xendric Interactive, more specifically by the lead progr
 
 For now, it's just a basic random bot as MCE626 learns more javascript and coding a discord bot. This bot is coded in Discord.js and Discord.js-commando.
 
-The prefix for this bot is "/"
+The prefix for this bot is "x//"
 
-Example: .roll
+Example: x//roll
 
 ## Todo list:
 - Music commands
 - Get profile stats from Xendric Interactive games (When the time comes)
 - Get SteamWars Image command working..
 - Maybe more ~~fun~~ random things?
+- Add FAQ link command
 
 ## Commands List:
 
@@ -24,8 +25,9 @@ Example: .roll
 
 ### Xendric
 - about (xendric, aboutxendric): About Xendric Interactive.
-- aboutbot (bot, xenbot): About XenBot.
+- info (bot, xenbot, aboutbot): About XenBot.
 - forum: Xendric Forums
 - steamwars (giftingwars, giftwars, sw): About the SteamWars.
 - swi (steamwarsimage, swimage, swimg, steamwarsimg): Get a random image from the SteamWars webpage on xendric.net (WIP)
 - todo (upcoming, wip, wipfeatures): A list of stuff to add to XenBot.
+- stats (stat): Gets some stats about XenBot.
