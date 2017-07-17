@@ -15,6 +15,5 @@ module.exports = class StatsCommand extends commando.Command{
     async run(message, args){
         const embed = new discord.RichEmbed().setTitle("XenBot Statistics").addField("Servers", `${this.client.guilds.size}`, true).addField("Users", `${this.client.users.size}`, true);
         message.channel.send({embed});
-        message.channel.send(`${this.client.guilds.name}`);
     }
 }
