@@ -17,14 +17,11 @@ module.exports = class SWICommand extends commando.Command{
 
     async run(message){
         var body;
-        var img;
         var roll = Math.floor(Math.random() * 6) + 1;
         if(roll == 4){
             body = 'http://xendric.net/assets/sw/4.gif';
-            img = "4.gif";
         } else {
             body = 'http://xendric.net/assets/sw/' + roll + '.png';
-            img = roll + ".png";
         }
 
         const embed = new discord.RichEmbed().setTitle("SteamWars Image").setURL("http://xendric.net/steamwars").setImage(body);
