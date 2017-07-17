@@ -1,6 +1,6 @@
 const commando = require('discord.js-commando');
 const discord = require('discord.js');
-const snekfetch = require('snekfetch');
+const fs = require('fs');
 
 module.exports = class SWICommand extends commando.Command{
     constructor(client ){
@@ -17,11 +17,14 @@ module.exports = class SWICommand extends commando.Command{
 
     async run(message){
         var body;
+        var img;
         var roll = Math.floor(Math.random() * 6) + 1;
         if(roll == 4){
-            body = await snekfetch.get("http://xendric.net/assets/sw/4.gif");
+            body = 'http://xendric.net/assets/sw/4.gif';
+            img = "4.gif";
         } else {
-            body = await snekfetch.get("http://xendric.net/assets/sw/1.png");
+            body = 'http://xendric.net/assets/sw/' + roll + '.png';
+            img = roll + ".png";
         }
 
         const embed = new discord.RichEmbed().setTitle("SteamWars Image").setURL("http://xendric.net/steamwars").setImage(body);
