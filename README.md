@@ -13,6 +13,7 @@ Example: x//roll
 - Music commands
 - Get profile stats from Xendric Interactive games (When the time comes)
 - Maybe more ~~fun~~ random things?
+- Time command
 
 ## Commands List:
 
