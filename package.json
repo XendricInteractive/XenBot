@@ -1,6 +1,6 @@
 {
   "name": "xenbot",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Xendric Shit.",
   "main": "index.js",
   "scripts": {
