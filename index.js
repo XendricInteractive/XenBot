@@ -4,7 +4,7 @@ const bot = new commando.Client({
     commandPrefix: 'x//'
 });
 const music = require('discord.js-music');
-music(bot);
+//music(bot);
 
 bot.on("ready", () => {
     bot.user.setGame("x//help");
