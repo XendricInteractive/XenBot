@@ -13,7 +13,7 @@ module.exports = class StatsCommand extends commando.Command{
     }
 
     async run(message, args){
-        const embed = new discord.RichEmbed().setTitle("XenBot Statistics").addField("Servers", `${this.client.guilds.size}`, true).addField("Users", `${this.client.users.size}`, true);
+        const embed = new discord.RichEmbed().setTitle("XenBot Statistics").addField("Servers", `${this.client.guilds.size}`, true).addField("Users", `${this.client.users.size}`, true).addField("Channels", `${this.client.channels.size}`, true).addField("Existed Since", "July 15, 2017", true);
         message.channel.send({embed});
     }
 }

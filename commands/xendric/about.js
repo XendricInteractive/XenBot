@@ -13,6 +13,6 @@ module.exports = class AboutCommand extends commando.Command{
 
     async run(message, args){
         message.channel.send("Xendric Interactive is a newly formed game development company. They are working on games.");
-        message.channel.send("If you wanted to know about XenBot, type *.info*");
+        message.channel.send("If you wanted to know about XenBot, type *x//info*");
     }
 }

@@ -6,7 +6,7 @@ module.exports = class ForumCommand extends commando.Command{
             name: 'forum',
             group: 'xendric',
             memberName: 'forum',
-            description: 'Xendric Forums'
+            description: 'Xendric Forums.'
         });
     }
 

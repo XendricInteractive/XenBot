@@ -8,7 +8,12 @@ const music = require('discord.js-music');
 
 bot.on("ready", () => {
     bot.user.setGame("x//help");
+    console.log(`**Bot ready. ${bot.guilds.size} servers, ${bot.channels.size} channels, ${bot.users.size} users.**`);
 });
+
+bot.on("error", (e) => console.error(e));
+bot.on("warn", (e) => console.warn(e));
+//bot.on("debug", (e) => console.info(e));
 
 bot.registry.registerGroups([
     ['random', 'Random'],

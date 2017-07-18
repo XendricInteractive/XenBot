@@ -6,7 +6,7 @@ module.exports = class FAQCommand extends commando.Command{
             name: 'faq',
             group: 'xendric',
             memberName: 'faq',
-            description: 'FAQ'
+            description: 'Gives FAQ link.'
         });
     }
 

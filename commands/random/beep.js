@@ -1,4 +1,5 @@
 const commando = require('discord.js-commando');
+const discord = require('discord.js');
 
 module.exports = class BeepCommand extends commando.Command{
     constructor(client ){
@@ -11,6 +12,9 @@ module.exports = class BeepCommand extends commando.Command{
     }
 
     async run(message, args){
-       message.channel.send("Boop.");
+        const embed = new discord.RichEmbed().setImage("http://i.imgur.com/Tu54A2K.gif");
+
+        message.channel.send("Boop.");
+        message.channel.send({embed});
     }
 }

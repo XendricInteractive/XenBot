@@ -4,10 +4,10 @@ module.exports = class SteamWarsCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'steamwars',
-            aliases: ['giftingwars', 'giftwars', 'sw'],
+            aliases: ['giftingwars', 'giftwars', 'sw', 'gw'],
             group: 'xendric',
             memberName: 'steamwars',
-            description: 'About the SteamWars.'
+            description: 'About the Steam/Gifting Wars.'
         });
     }
 

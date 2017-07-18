@@ -1,7 +1,7 @@
 {
   "name": "xenbot",
-  "version": "0.0.9",
-  "description": "Xendric Shit.",
+  "version": "0.0.9b",
+  "description": "Get game stats from Xendric Interactive games.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "author": "MCE626#8523",
   "license": "ISC",
   "framework": "JavaScript",
-  "lib": "discord.js\ndiscord.js-commando\ndiscord.js-music",
+  "lib": ["discord.js","discord.js-commando","discord.js-music"],
   "prefix": "x//",
   "dependencies": {
     "discord.js": "^11.1.0",

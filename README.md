@@ -26,8 +26,8 @@ Example: x//roll
 - about (xendric, aboutxendric): About Xendric Interactive.
 - info (bot, xenbot, aboutbot): About XenBot.
 - forum: Xendric Forums
-- steamwars (giftingwars, giftwars, sw): About the SteamWars.
-- swi (steamwarsimage, swimage, swimg, steamwarsimg): Get a random image from the SteamWars webpage on xendric.net
+- steamwars (giftingwars, giftwars, sw, gw): About the Steam/Gifting Wars.
+- swi (gwi, steamwarsimage, swimage, swimg, steamwarsimg): Get a random image from the Steam/Gifting Wars webpage on xendric.net
 - todo (upcoming, wip, wipfeatures): A list of stuff to add to XenBot.
 - stats (stat): Gets some stats about XenBot.
 - faq: Gives the FAQ link.
