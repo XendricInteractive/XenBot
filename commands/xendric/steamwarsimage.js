@@ -16,7 +16,7 @@ module.exports = class SWICommand extends commando.Command{
 
     async run(message){
         var body;
-        var roll = Math.floor(Math.random() * 9) + 1;
+        var roll = Math.floor(Math.random() * 10) + 1;
         if(roll == 4){
             body = 'http://xendric.net/assets/sw/4.gif';
         } else {
