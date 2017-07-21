@@ -4,9 +4,9 @@ const discord = require('discord.js');
 module.exports = class FSCommand extends commando.Command{
     constructor(client ){
         super(client, {
-            name: 'Ficken Schweden',
+            name: 'ficken_schweden',
             group: 'random',
-            memberName: 'Ficken Schweden',
+            memberName: 'ficken_schweden',
             description: 'Ficken Schweden'
         });
     }
