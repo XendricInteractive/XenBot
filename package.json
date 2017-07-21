@@ -1,6 +1,6 @@
 {
   "name": "xenbot",
-  "version": "0.0.9b",
+  "version": "0.0.9c",
   "description": "Get game stats from Xendric Interactive games.",
   "main": "index.js",
   "scripts": {
