@@ -1,7 +1,7 @@
 const commando = require('discord.js-commando');
 const discord = require('discord.js');
 
-module.exports = class FSCommand extends commando.Command{
+module.exports = class FGCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'jävla_tyskar',

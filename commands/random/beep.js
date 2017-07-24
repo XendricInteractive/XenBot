@@ -12,7 +12,7 @@ module.exports = class BeepCommand extends commando.Command{
     }
 
     async run(message, args){
-        const embed = new discord.RichEmbed().setImage("http://i.imgur.com/Tu54A2K.gif");
+        const embed = new discord.RichEmbed().setColor(0x007fed).setImage("http://i.imgur.com/Tu54A2K.gif");
 
         message.channel.send("Boop.");
         message.channel.send({embed});

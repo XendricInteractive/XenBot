@@ -23,7 +23,7 @@ module.exports = class SWICommand extends commando.Command{
             body = 'http://xendric.net/assets/sw/' + roll + '.png';
         }
 
-        const embed = new discord.RichEmbed().setTitle("Steam/Gifting Wars Image").setURL("http://xendric.net/steamwars").setImage(body);
+        const embed = new discord.RichEmbed().setColor(0x007fed).setTitle("__Steam/Gifting Wars Image__").setURL("http://xendric.net/steamwars").setImage(body);
         message.channel.send({embed});
     }
 }
