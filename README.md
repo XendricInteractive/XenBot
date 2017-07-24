@@ -23,7 +23,7 @@ Example: x//roll
 - roll (die, dice): Rolls a die
 - time: Shows your time! (Want to add more later)
 - server (aboutserver, serverinfo): Gets some info about the server.
-- user (aboutuser, userinfo, user-info, infouser, userprofile) <user>: Gets info about a user! You can do x//user for getting info of yourself, you can tag someone or you can do it by nickname, without a mention. This may not result in the user you want though. Yes you can get info from user bots.
+- user (aboutuser, userinfo, user-info, infouser, userprofile) < user >: Gets info about a user! You can do x//user for getting info of yourself, you can tag someone or you can do it by nickname, without a mention. This may not result in the user you want though. Yes you can get info from user bots.
 - random: Does a random command! (WIP)
 - jävla_tyskar: Ficken Schweden.
 - ficken_schweden: Jävla tyskar.
