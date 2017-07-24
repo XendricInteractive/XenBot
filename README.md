@@ -9,18 +9,27 @@ The prefix for this bot is "x//"
 
 Example: x//roll
 
+[] is required <> is optional () are aliases.
+
 ## Todo list:
 - Music commands
 - Get profile stats from Xendric Interactive games (When the time comes)
 - Maybe more ~~fun~~ random things?
-- Time command
 
 ## Commands List:
 
 ### Random
 - beep: Beep boop bop.
 - roll (die, dice): Rolls a die
-- music: Music! (WIP)
+- time: Shows your time! (Want to add more later)
+- server (aboutserver, serverinfo): Gets some info about the server.
+- user (aboutuser, userinfo, user-info, infouser, userprofile) <user>: Gets info about a user! You can do x//user for getting info of yourself, you can tag someone or you can do it by nickname, without a mention. This may not result in the user you want though. Yes you can get info from user bots.
+- random: Does a random command! (WIP)
+- jävla_tyskar: Ficken Schweden.
+- ficken_schweden: Jävla tyskar.
+
+### Music
+Whole section is a WIP.
 
 ### Xendric
 - about (xendric, aboutxendric): About Xendric Interactive.
