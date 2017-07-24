@@ -1,6 +1,7 @@
 const commando = require('discord.js-commando');
+const config = require('./config.json');
 const bot = new commando.Client({
-    owner: '97571276813508608',
+    owner: config.owner,
     commandPrefix: 'x//'
 });
 const music = require('discord.js-music');
@@ -21,4 +22,4 @@ bot.registry.registerGroups([
     ['music', "Music"]
 ]).registerDefaults().registerCommandsIn(__dirname + "/commands");
 
-bot.login('MzM1NjIzODg3MjQ3MTE0MjQw.DEsyiw.GUhGNzPN3BWTKy9bYiOvTbuAICA');
+bot.login(config.token);
