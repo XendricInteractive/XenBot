@@ -9,7 +9,7 @@ For now, it's just a basic random bot as MCE626 learns more javascript and codin
 
 The prefix for this bot is "x//"
 
-Example: x//roll
+Example: x//time 1 30 2 5
 
 [] is required <> is optional () are aliases.
 
@@ -22,8 +22,9 @@ Example: x//roll
 
 ### Random
 - beep: Beep boop bop.
-- roll (die, dice): Rolls a die
-- time: Shows your time! (Want to add more later)
+- roll (die, dice): Rolls a die.
+- time: Shows stats about your time!
+- timein < hours minutes months days >: What time will it be in xx hours/minutes/days/months/etc from now?
 - server (aboutserver, serverinfo): Gets some info about the server.
 - user (aboutuser, userinfo, user-info, infouser, userprofile) < user >: Gets info about a user! You can do x//user for getting info of yourself, you can tag someone or you can do it by nickname, without a mention. This may not result in the user you want though. Yes you can get info from user bots.
 - random: Does a random command! (WIP)
