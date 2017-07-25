@@ -16,11 +16,19 @@ module.exports = class AboutBotCommand extends commando.Command{
         });
     }
 
-    async run(message, args){
-        message.channel.send("XenBot is a discord bot made by Xendric Interactive, more specifically by the lead programmer *MCE626*.");
-        message.channel.send("It is a bot that can take your profile stats from Xendric Interactive's games (When the time comes). For now it's just a basic bot to mess around with.");
-        
-        const embed = new discord.RichEmbed().setTitle("__XenBot Info__").setColor(0x007fed).setThumbnail(`${this.client.user.avatarURL}`).addField("Developers", "**__Xendric Interactive__**\n*MCE626* - Lead Programmer\n*Guybot1001* - Graphic Artist", true).addField("Libraries", json.lib, true).addField("Framework", json.framework, true).addField("Bot Version", json.version, true).addField("Bot Prefix", `${this.client.commandPrefix}`, true).addField("Created", "Jul 15, 2017", true).addField("OS", `${os.platform()}`, true);
+    async run(message, args){        
+        const embed = new discord.RichEmbed();
+        embed.setTitle("__XenBot Info__");
+        embed.setColor(0x007fed);
+        embed.setThumbnail(`${this.client.user.avatarURL}`);
+        embed.setDescription("XenBot is a discord bot made by Xendric Interactive, more specifically by the lead programmer *MCE626*." + "\n\n" + "It is a bot that can take your profile stats from Xendric Interactive's games (When the time comes). For now it's just a basic bot to mess around with. *x//help* for list of commands.");
+        embed.addField("Developers", "**__Xendric Interactive__**\n*MCE626* - Lead Programmer\n*Guybot1001* - Graphic Artist", true);
+        embed.addField("Libraries", json.lib, true);
+        embed.addField("Framework", json.framework, true);
+        embed.addField("Bot Version", json.version, true);
+        embed.addField("Bot Prefix", `${this.client.commandPrefix}`, true);
+        embed.addField("Created", "Jul 15, 2017", true);
+        embed.addField("OS", `${os.platform()}`, true);
         message.channel.send({embed});
     }
 }

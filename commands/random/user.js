@@ -10,6 +10,7 @@ module.exports = class AboutUserCommand extends commando.Command{
             memberName: 'user',
             guildOnly: true,
             description: 'Info about a user\'s discord profile!',
+            examples: ['user', 'user username/nickname'],
             args: [
                 {
                     key: "member",
