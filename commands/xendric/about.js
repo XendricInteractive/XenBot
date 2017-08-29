@@ -4,7 +4,7 @@ module.exports = class AboutCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'about',
-            aliases: ['xendric', 'aboutxendric'],
+            aliases: ['xendric'],
             group: 'xendric',
             memberName: 'about',
             description: 'About Xendric Interactive.'
