@@ -5,7 +5,7 @@ module.exports = class SWICommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'swi',
-            aliases: ['gwi','steamwarsimage', 'swimgae', 'swimg', 'steamwarsimg'],
+            aliases: ['gwi'],
             group: 'xendric',
             memberName: 'swi',
             description: 'Get a random image from the SteamWars webpage on *xendric.net*.'
@@ -16,7 +16,7 @@ module.exports = class SWICommand extends commando.Command{
 
     async run(message){
         var body;
-        var roll = Math.floor(Math.random() * 20) + 1;
+        var roll = Math.floor(Math.random() * 21) + 1;
         if(roll == 4){
             body = 'http://xendric.net/assets/sw/' + roll + '.gif';
         } else {

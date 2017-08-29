@@ -4,7 +4,7 @@ module.exports = class RandomCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'random',
-            aliases: ['rand', 'randomcommand', 'randcommand', 'randcmd', 'randomcmd', 'rc'],
+            aliases: ['rand'],
             group: 'random',
             memberName: 'random',
             description: 'Does a random command from the *Random* category and the *swi* command.  (WIP)',

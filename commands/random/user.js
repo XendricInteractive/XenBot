@@ -5,7 +5,6 @@ module.exports = class AboutUserCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'user',
-            aliases: ['aboutuser', 'userinfo', 'user-info', 'infouser', 'userprofile'],
             group: 'random',
             memberName: 'user',
             guildOnly: true,

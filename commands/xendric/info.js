@@ -9,7 +9,7 @@ module.exports = class AboutBotCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'info',
-            aliases: ['bot', 'xenbot', 'aboutbot'],
+            aliases: ['bot', 'xenbot'],
             group: 'xendric',
             memberName: 'info',
             description: 'About XenBot.'

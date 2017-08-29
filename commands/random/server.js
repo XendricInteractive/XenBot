@@ -5,7 +5,6 @@ module.exports = class AboutServerCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'server',
-            aliases: ['aboutserver', 'serverinfo'],
             group: 'random',
             memberName: 'server',
             description: 'Info about the server the bot is on.'
