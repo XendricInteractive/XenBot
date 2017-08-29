@@ -11,6 +11,6 @@ module.exports = class FAQCommand extends commando.Command{
     }
 
     async run(message, args){
-        message.channel.send("http://xendric.net/faq/xenbot");
+        message.channel.send("http://xendric.net/xenbot");
     }
 }
