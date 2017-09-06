@@ -9,9 +9,13 @@
   "author": "MCE626#8523",
   "license": "ISC",
   "framework": "JavaScript",
-  "lib": ["discord.js","discord.js-commando","discord.js-music"],
+  "lib": [
+    "discord.js",
+    "discord.js-commando",
+    "discord.js-music"
+  ],
   "dependencies": {
-    "discord.js": "^11.1.0",
+    "discord.js": "^11.2.1",
     "discord.js-commando": "^0.9.0",
     "discord.js-music": "^1.0.3"
   }
