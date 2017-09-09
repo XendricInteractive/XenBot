@@ -19,7 +19,7 @@ module.exports = class StatsCommand extends commando.Command{
         embed.addField("Servers", `${this.client.guilds.size}`, true);
         embed.addField("Users", `${this.client.users.size}`, true);
         embed.addField("Channels", `${this.client.channels.size}`, true);
-        embed.addField("Existed Since", "July 15, 2017", true);
+        embed.addField("Bot Created", "Sat July 15, 2017", true);
         message.channel.send({embed});
     }
 }
