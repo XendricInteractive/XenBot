@@ -1,5 +1,8 @@
 const commando = require('discord.js-commando');
 const discord = require('discord.js');
+const fs = require('fs');
+
+let json = JSON.parse(fs.readFileSync("./package.json","utf8"));
 
 module.exports = class StatsCommand extends commando.Command{
     constructor(client ){
@@ -19,7 +22,7 @@ module.exports = class StatsCommand extends commando.Command{
         embed.addField("Servers", `${this.client.guilds.size}`, true);
         embed.addField("Users", `${this.client.users.size}`, true);
         embed.addField("Channels", `${this.client.channels.size}`, true);
-        embed.addField("Bot Created", "Sat July 15, 2017", true);
+        embed.addField("Bot Created", json.created, true);
         message.channel.send({embed});
     }
 }

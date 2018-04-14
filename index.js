@@ -2,13 +2,13 @@ const commando = require('discord.js-commando');
 const config = require('./config.json');
 const bot = new commando.Client({
     owner: config.owner,
-    commandPrefix: 'x//'
+    commandPrefix: 'xd//'
 });
 const music = require('discord.js-music');
 //music(bot);
 
 bot.on("ready", () => {
-    bot.user.setGame("x//help");
+    bot.user.setGame("xd//help");
     console.log(`**Bot ready. ${bot.guilds.size} servers, ${bot.channels.size} channels, ${bot.users.size} users.**`);
 });
 

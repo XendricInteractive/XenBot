@@ -27,7 +27,7 @@ module.exports = class AboutBotCommand extends commando.Command{
         embed.addField("Framework", json.framework, true);
         embed.addField("Bot Version", json.version, true);
         embed.addField("Bot Prefix", `${this.client.commandPrefix}`, true);
-        embed.addField("Bot Created", "Sat Jul 15, 2017", true);
+        embed.addField("Bot Created", json.created, true);
         embed.addField("OS", `${os.platform()}`, true);
         message.channel.send({embed});
     }
