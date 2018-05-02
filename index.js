@@ -4,8 +4,6 @@ const bot = new commando.Client({
     owner: config.owner,
     commandPrefix: 'xd//'
 });
-const music = require('discord.js-music');
-//music(bot);
 
 bot.on("ready", () => {
     bot.user.setGame("xd//help");
@@ -18,8 +16,7 @@ bot.on("warn", (e) => console.warn(e));
 
 bot.registry.registerGroups([
     ['random', 'Random'],
-    ['xendric', 'Xendric'],
-    ['music', "Music"]
+    ['xendric', 'Xendric']
 ]).registerDefaults().registerCommandsIn(__dirname + "/commands");
 
 bot.login(config.token);

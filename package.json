@@ -1,6 +1,6 @@
 {
   "name": "xenbotdev",
-  "version": "0.0.11e",
+  "version": "0.0.12",
   "description": "Gets game stats from Xendric Interactive games.",
   "main": "index.js",
   "scripts": {
@@ -12,12 +12,10 @@
   "created": "Fri Apr 13, 2018",
   "lib": [
     "discord.js",
-    "discord.js-commando",
-    "discord.js-music"
+    "discord.js-commando"
   ],
   "dependencies": {
     "discord.js": "^11.2.1",
-    "discord.js-commando": "^0.9.0",
-    "discord.js-music": "^1.0.3"
+    "discord.js-commando": "^0.9.0"
   }
 }
