@@ -5,6 +5,7 @@ module.exports = class BeepCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'beep',
+            aliases: ['boop'],
             group: 'random',
             memberName: 'beep',
             description: 'Beep boop bop.'
