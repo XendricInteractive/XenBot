@@ -12,7 +12,6 @@ The prefix for this bot is "x//". You can also tag the bot and do a command with
 Example: x//timein 1 30 2 5
 
 ## Todo list:
-- Music commands
 - Get profile stats from Xendric Interactive games (When the time comes)
 - Maybe more ~~fun~~ random things?
 
