@@ -21,7 +21,7 @@ module.exports = class HealingCommand extends commando.Command{
         } else {
             body = "https://i.imgur.com/rswAmsJ.jpg";
         }
-        const embed = new discord.RichEmbed().setColor(0x007fed).setImage(body);
+        const embed = new discord.RichEmbed().setColor(0xfedc57).setImage(body);
 
         if(troll == 1)
             tbody = "You really should take better care of yourself.";
