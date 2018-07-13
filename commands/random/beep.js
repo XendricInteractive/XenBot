@@ -21,7 +21,7 @@ module.exports = class BeepCommand extends commando.Command{
         } else {
             body = "https://i.imgur.com/NFkkSaY.gif";
         }
-        const embed = new discord.RichEmbed().setColor(0x007fed).setImage(body);
+        const embed = new discord.RichEmbed().setColor(0xa350f9).setImage(body);
 
         message.channel.send("Boop.");
         message.channel.send({embed});

@@ -15,12 +15,13 @@ module.exports = class TimeCommand extends commando.Command{
         const date = new Date();
         const nowDate = new Date()
         const embed = new discord.RichEmbed();
+
         embed.setColor(0x007fed);
-        embed.setTitle("__" + message.author.username + " Time Info__");
-        embed.addField("Your 24hr Time", date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(), true);
-        embed.addField("Date", (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear(), true);
+        embed.setTitle(`__${message.author.username}'s Time Info__`);
+        embed.addField("Your 24hr Time", date.toTimeString(), true);
+        embed.addField("Date", (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear() + "\n" + date.toDateString(), true);
         embed.addField("Day of the Week", date.getDay(), true);
-        embed.addField("UTC Time", date.getUTCHours() + ":" + date.getUTCMinutes() + ":" + date.getUTCSeconds(), true);
+        embed.addField("UTC Time", date.toUTCString(), true);
         
         message.channel.send({embed});
     }

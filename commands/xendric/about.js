@@ -1,3 +1,4 @@
+const discord = require('discord.js');
 const commando = require('discord.js-commando');
 
 module.exports = class AboutCommand extends commando.Command{
@@ -12,7 +13,11 @@ module.exports = class AboutCommand extends commando.Command{
     }
 
     async run(message, args){
-        message.channel.send("Xendric Interactive is a newly formed game development company. They are working on games.");
-        message.channel.send("If you wanted to know about XenBot, type *x//info*");
+        const embed = new discord.RichEmbed();
+        embed.setTitle("__About Xendric__");
+        embed.setColor(0xff6300);
+        embed.addField("\u007f", `Xendric Interactive is a newly formed game development company. They are working on games.\nIf you wanted to know about *XenBot*, type *${this.client.commandPrefix}info*`);
+
+        message.channel.send({embed});
     }
 }

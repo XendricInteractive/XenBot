@@ -19,9 +19,10 @@ module.exports = class AboutBotCommand extends commando.Command{
     async run(message, args){        
         const embed = new discord.RichEmbed();
         embed.setTitle("__XenBot Info__");
-        embed.setColor(0x007fed);
+        embed.setColor(0xff6300);
         embed.setThumbnail(`${this.client.user.avatarURL}`);
         embed.setDescription("XenBot is a discord bot made by Xendric Interactive, more specifically by the lead programmer *MCE626*." + "\n\n" + "It is a bot that can take your profile stats from Xendric Interactive's games (When the time comes). For now it's just a basic bot to mess around with. *x//help* for list of commands.");
+        embed.addBlankField();
         embed.addField("Developers", "**__Xendric Interactive__**\n*MCE626* - Lead Programmer\n*Guybot1001* - Graphic Artist", true);
         embed.addField("Libraries", json.lib, true);
         embed.addField("Framework", json.framework, true);
@@ -29,6 +30,9 @@ module.exports = class AboutBotCommand extends commando.Command{
         embed.addField("Bot Prefix", `${this.client.commandPrefix}`, true);
         embed.addField("Bot Created", json.created, true);
         embed.addField("OS", `${os.platform()}`, true);
+        embed.addBlankField();
+        embed.addField("Links", "*XenBot Server:* https://discord.gg/cKVHVDX \n*Xendric Interactive Server:* http://discord.gg/zsGzmWc", true);
+
         message.channel.send({embed});
     }
 }

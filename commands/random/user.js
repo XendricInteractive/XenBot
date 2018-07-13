@@ -40,7 +40,7 @@ module.exports = class AboutUserCommand extends commando.Command{
         embed.addField("Game", `${user.presence.game ? user.presence.game.name : "Not in a game."}`, true);
         embed.addField("Nickname", `${member.nickname ? member.nickname : "N/A"}`, true);
         embed.addField("User Bot?", `${user.bot}`, true);
-        embed.setFooter(message.author.username + " looked up a user's info!", message.author.avatarURL);
+        embed.setFooter(`${message.author.username} looked up ${message.author.username === user.username ? "their" : user.username + "'s"} info!`, message.author.avatarURL);
 
         message.channel.send({embed});
     }
