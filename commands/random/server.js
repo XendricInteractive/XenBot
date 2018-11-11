@@ -2,20 +2,12 @@ const commando = require('discord.js-commando');
 const discord = require('discord.js');
 
 module.exports = class AboutServerCommand extends commando.Command{
-    constructor(client ){
+    constructor(client){
         super(client, {
             name: 'server',
             group: 'random',
             memberName: 'server',
-            description: 'Info about the server the bot is on or from a server id.',
-            args: [
-                {
-                    key: "id",
-                    prompt: "What server info do you want to see?\n",
-                    type: "string",
-                    default: ''
-                }
-            ],
+            description: 'Info about the server the bot is on.',
             throttling: {
                 usages: 2,
                 duration: 3
@@ -24,11 +16,10 @@ module.exports = class AboutServerCommand extends commando.Command{
     }
 
     async run(message, args){
-        const id = args.id || message.guild.id;
-        const server = args.id || message.guild;
-
+        const server = message.guild;
+        
         if(server.available === true){
-            let icon = `${server.iconURL ? message.guild.iconURL : "https://cdn.discordapp.com/embed/avatars/1.png"}`;
+            let icon = `${server.iconURL ? server.iconURL : "https://cdn.discordapp.com/embed/avatars/1.png"}`;
             let afkTime = server.afkTimeout / 60;
 
             const embed = new discord.RichEmbed();
@@ -50,7 +41,7 @@ module.exports = class AboutServerCommand extends commando.Command{
 
             message.channel.send({embed});
         } else {
-            message.author.send("Server isn't available!");
+            message.channel.send("Server isn't available!");
         }
     }
 }

@@ -42,7 +42,10 @@ module.exports = class AboutUserCommand extends commando.Command{
         embed.addField("User Bot?", `${user.bot}`, true);
 
         embed.addField("Game", `${presence.game ? presence.game.name : "Not in a game."}`, true);
-        embed.addField("Livestream", `${presence.game.streaming ? "Yes " + upresence.game.url : "Not Streaming"}`, true);
+        if(presence.game !== null)
+            embed.addField("Livestream", `${presence.game.streaming ? "Yes\n" + presence.game.url : "Not Streaming"}`, true);
+        else
+            embed.addField("Livestream", "Not Streaming", true);
 
         embed.setFooter(`${message.author.username} looked up ${message.author.username === user.username ? "their" : user.username + "'s"} info!`, message.author.avatarURL);
 
