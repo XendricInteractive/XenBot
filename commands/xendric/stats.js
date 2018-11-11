@@ -11,7 +11,7 @@ module.exports = class StatsCommand extends commando.Command{
             aliases: ['stat'],
             group: 'xendric',
             memberName: 'stats',
-            description: 'Gets some stats about XenBot.'
+            description: 'Gets stats about XenBot.'
         });
     }
 
@@ -22,7 +22,7 @@ module.exports = class StatsCommand extends commando.Command{
         embed.addField("Servers", `${this.client.guilds.size}`, true);
         embed.addField("Users", `${this.client.users.size}`, true);
         embed.addField("Channels", `${this.client.channels.size}`, true);
-        embed.addField("Bot Created", json.created, true);
+        embed.addField("Bot Created", `${this.client.user.createdAt}`, true);
         message.channel.send({embed});
     }
 }
