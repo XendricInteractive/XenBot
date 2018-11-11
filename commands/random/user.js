@@ -28,6 +28,7 @@ module.exports = class AboutUserCommand extends commando.Command{
     async run(message, args){
         const user = args.member.user || message.author;
         const member = args.member || message.member;
+        const presence = user.presence;
 
         const embed = new discord.RichEmbed();
         embed.setTitle("__" + user.username + " Info__");
@@ -36,10 +37,13 @@ module.exports = class AboutUserCommand extends commando.Command{
         embed.addField("Username", `${user.username}#${user.discriminator}`, true);
         embed.addField("User ID", `${user.id}`, true);
         embed.addField("User Created", `${user.createdAt}`, true);
-        embed.addField("Status", `${user.presence.status}`, true);
-        embed.addField("Game", `${user.presence.game ? user.presence.game.name : "Not in a game."}`, true);
+        embed.addField("Status", `${presence.status}`, true);
         embed.addField("Nickname", `${member.nickname ? member.nickname : "N/A"}`, true);
         embed.addField("User Bot?", `${user.bot}`, true);
+
+        embed.addField("Game", `${presence.game ? presence.game.name : "Not in a game."}`, true);
+        embed.addField("Livestream", `${presence.game.streaming ? "Yes " + upresence.game.url : "Not Streaming"}`, true);
+
         embed.setFooter(`${message.author.username} looked up ${message.author.username === user.username ? "their" : user.username + "'s"} info!`, message.author.avatarURL);
 
         message.channel.send({embed});

@@ -18,6 +18,7 @@ module.exports = class AboutBotCommand extends commando.Command{
 
     async run(message, args){        
         const embed = new discord.RichEmbed();
+
         embed.setTitle("__XenBot Info__");
         embed.setColor(0xff6300);
         embed.setThumbnail(`${this.client.user.avatarURL}`);
@@ -28,8 +29,8 @@ module.exports = class AboutBotCommand extends commando.Command{
         embed.addField("Framework", json.framework, true);
         embed.addField("Bot Version", json.version, true);
         embed.addField("Bot Prefix", `${this.client.commandPrefix}`, true);
-        embed.addField("Bot Created", json.created, true);
-        embed.addField("OS", `${os.platform()}`, true);
+        embed.addField("Bot Created", `${this.client.user.createdAt}`, true);
+        embed.addField("OS", `${os.platform() + " " + os.arch()}`, true);
         embed.addBlankField();
         embed.addField("Links", "*XenBot Server:* https://discord.gg/cKVHVDX \n*Xendric Interactive Server:* http://discord.gg/zsGzmWc", true);
 
