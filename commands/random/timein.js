@@ -7,8 +7,8 @@ module.exports = class TimeInCommand extends commando.Command{
             name: 'timein',
             group: 'random',
             memberName: 'timein',
-            description: 'What will the time be in *xx* hours/minutes/days/months/years (h,m,d,M,y) from now?',
-            examples: ['timein 1h 2m - *1 hour and 2 minutes*', 'timein 4d 2M - *4 days, 2 months*', 'timein 1d 5h - *1 day, 5 hours*', 'timein 5y 3d - *5 years, 3 days*'],
+            description: 'What will the time be in *xx* hours/minutes/days/months/years (h, m, d, M, y) from now?',
+            examples: ['timein 1h 2m --> *1 hour, 2 minutes*', 'timein 4d 2M --> *4 days, 2 months*', 'timein 1d 5h --> *1 day, 5 hours*', 'timein 5y 3d --> *5 years, 3 days*', 'timein 1h 1m 1d 1M 1y --> 1 hour, 1 minute, 1 day, 1 month, 1 year'],
             args: [
                 {
                     key: 'time',
@@ -27,7 +27,10 @@ module.exports = class TimeInCommand extends commando.Command{
     */
     async run(message, args){
         // Converts the arg type of string into an array. Couldn't get the args type value to be an array from the start..
-        args = message.content.slice(`${this.client.commandPrefix}`.length + 'timein'.length).trim().split(/ +/g);
+        if(message.channel instanceof discord.DMChannel)
+            args = message.content.slice('timein'.length).trim().split(/ +/g);
+        else
+            args = message.content.slice(`${this.client.commandPrefix}`.length + 'timein'.length).trim().split(/ +/g);
 
         // Go through array, and each item to find specific char
         const strHours = args.filter(s => s.includes('h')).toString();
@@ -93,12 +96,11 @@ module.exports = class TimeInCommand extends commando.Command{
         }
 
         const calculateFullMinutes = () => {
-            return (newDate.getMinutes()<10?'0':'') + newDate.getMinutes();
+            return (newDate.getMinutes() < 10 ? '0' : '') + newDate.getMinutes();
         }
 
         const embed = new discord.RichEmbed();
         embed.setColor(0x007fed);
-        console.log(stringTitle())
         embed.setTitle('__What will it be in ' + stringTitle() + ' from now?__');
         embed.addField("24hr Time", newDate.getHours() + ":" + calculateFullMinutes(), true);
         embed.addField("Date", (newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear(), true);
