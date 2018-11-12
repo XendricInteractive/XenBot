@@ -33,7 +33,7 @@ module.exports = class AboutUserCommand extends commando.Command{
         const embed = new discord.RichEmbed();
         embed.setTitle("__" + user.username + " Info__");
         embed.setThumbnail(user.avatarURL);
-        embed.setColor(0x007fed);
+        embed.setColor(message.guild.me.colorRole.hexColor);
         embed.addField("Username", `${user.username}#${user.discriminator}`, true);
         embed.addField("User ID", `${user.id}`, true);
         embed.addField("User Created", `${user.createdAt}`, true);

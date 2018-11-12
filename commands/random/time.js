@@ -15,7 +15,7 @@ module.exports = class TimeCommand extends commando.Command{
         const date = new Date();
         const embed = new discord.RichEmbed();
 
-        embed.setColor(0x007fed);
+        embed.setColor(message.guild.me.colorRole.hexColor);
         embed.setTitle(`__${message.author.username}'s Time Info__`);
         embed.addField("Your 24hr Time", date.toTimeString(), true);
         embed.addField("Date", (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear() + "\n" + date.toDateString(), true);

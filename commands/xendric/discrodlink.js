@@ -15,7 +15,7 @@ module.exports = class DiscordLinkCommand extends commando.Command{
     async run(message, args){        
         const embed = new discord.RichEmbed();
         embed.setTitle("__Xendric Discord Servers__");
-        embed.setColor(0x007fed);
+        embed.setColor(0xff6300);
         embed.addField("Xenbot Dev Testing Discord", "https://discord.gg/cKVHVDX", true);
         embed.addBlankField();
         embed.addField("Xendric Interactive Community Discord", "http://discord.gg/zsGzmWc", true);

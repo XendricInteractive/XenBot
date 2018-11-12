@@ -25,7 +25,7 @@ module.exports = class AboutServerCommand extends commando.Command{
             const embed = new discord.RichEmbed();
             embed.setTitle("__Server Info__");
             embed.setThumbnail(icon);
-            embed.setColor(0x007fed);
+            embed.setColor(message.guild.me.colorRole.hexColor);
             embed.addField("Server Name",`${server.name + " (" + server.nameAcronym + ")"}`, true);
             embed.addField("Server ID", `${server.id}`, true);
             embed.addField("Verified Server", `${server.verified}`, true);

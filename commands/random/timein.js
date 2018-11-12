@@ -100,7 +100,7 @@ module.exports = class TimeInCommand extends commando.Command{
         }
 
         const embed = new discord.RichEmbed();
-        embed.setColor(0x007fed);
+        embed.setColor(message.guild.me.colorRole.hexColor);
         embed.setTitle('__What will it be in ' + stringTitle() + ' from now?__');
         embed.addField("24hr Time", newDate.getHours() + ":" + calculateFullMinutes(), true);
         embed.addField("Date", (newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear(), true);

@@ -20,7 +20,7 @@ module.exports = class AboutBotCommand extends commando.Command{
         const embed = new discord.RichEmbed();
 
         embed.setTitle("__XenBot Info__");
-        embed.setColor(0xff6300);
+        embed.setColor(0x007fed);
         embed.setThumbnail(`${this.client.user.avatarURL}`);
         embed.setDescription("XenBot is a discord bot made by Xendric Interactive, more specifically by the lead programmer *MCE626*." + "\n\n" + "It is a bot that can take your profile stats from Xendric Interactive's games (When the time comes). For now it's just a basic bot to mess around with. *x//help* for list of commands.");
         embed.addBlankField();

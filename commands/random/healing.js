@@ -5,6 +5,7 @@ module.exports = class HealingCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'needhealing',
+            aliases: ['ineedhealing'],
             group: 'random',
             memberName: 'healing',
             description: 'I need healing.'
