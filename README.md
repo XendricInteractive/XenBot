@@ -1,5 +1,5 @@
 # XenBot
-Xendric's Discord bot. Woo. Invite bot to your server: [Invite](https://discordapp.com/oauth2/authorize?client_id=335623887247114240&scope=bot&permissions=1341652179)
+Xendric's Discord bot. Woo. Invite bot to your server: [Invite](https://discordapp.com/oauth2/authorize?client_id=335623887247114240&scope=bot&permissions=0)
 
 [![](http://img.shields.io/website-up-down-green-red/http/xendric.net.svg?label=XenBot)](http://xendric.net/xenbot)
 ![](https://img.shields.io/badge/Framework-JavaScript-green.svg)
