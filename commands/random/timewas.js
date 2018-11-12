@@ -1,18 +1,18 @@
 const commando = require('discord.js-commando');
 const discord = require('discord.js');
 
-module.exports = class TimeInCommand extends commando.Command{
+module.exports = class TimeWasCommand extends commando.Command{
     constructor(client){
         super(client, {
-            name: 'timein',
+            name: 'timewas',
             group: 'random',
-            memberName: 'timein',
-            description: 'What will the time be in *xx* hours/minutes/days/months/years (h, m, d, M, y) from now?',
-            examples: ['timein 1h 2m --> *1 hour, 2 minutes*', 'timein 4d 2M --> *4 days, 2 months*', 'timein 1d 5h --> *1 day, 5 hours*', 'timein 5y 3d --> *5 years, 3 days*', 'timein 1h 1m 1d 1M 1y --> 1 hour, 1 minute, 1 day, 1 month, 1 year'],
+            memberName: 'timewas',
+            description: 'What time was it *xx* hours/minutes/days/months/years (h, m, d, M, y) ago?',
+            examples: ['timewas 1h 2m --> *1 hour, 2 minutes*', 'timewas 4d 2M --> *4 days, 2 months*', 'timewas 1d 5h --> *1 day, 5 hours*', 'timewas 5y 3d --> *5 years, 3 days*', 'timewas 1h 1m 1d 1M 1y --> 1 hour, 1 minute, 1 day, 1 month, 1 year'],
             args: [
                 {
                     key: 'time',
-                    prompt: 'What time will it be in xx hours, xx minutes, xx days, xx months and xx years?',
+                    prompt: 'What time was it xx hours, xx minutes, xx days, xx months and xx years ago?',
                     type: 'string'
                 }
             ]
@@ -28,9 +28,9 @@ module.exports = class TimeInCommand extends commando.Command{
     async run(message, args){
         // Converts the arg type of string into an array. Couldn't get the args type value to be an array from the start..
         if(message.channel instanceof discord.DMChannel)
-            args = message.content.slice('timein'.length).trim().split(/ +/g);
+            args = message.content.slice('timewas'.length).trim().split(/ +/g);
         else
-            args = message.content.slice(`${this.client.commandPrefix}`.length + 'timein'.length).trim().split(/ +/g);
+            args = message.content.slice(`${this.client.commandPrefix}`.length + 'timewas'.length).trim().split(/ +/g);
 
         // Go through array, and each item to find specific char
         const strHours = args.filter(s => s.includes('h')).toString();
@@ -48,11 +48,11 @@ module.exports = class TimeInCommand extends commando.Command{
 
         // Calculate new date
         const newDate = new Date();
-        newDate.setHours(newDate.getHours() + Number(tempHours));
-        newDate.setMinutes(newDate.getMinutes() + Number(tempMins));
-        newDate.setDate(newDate.getDate() + Number(tempDays));
-        newDate.setMonth(newDate.getMonth() + Number(tempMonths));
-        newDate.setFullYear(newDate.getFullYear() + Number(tempYears));
+        newDate.setHours(Number(tempHours) > newDate.getHours() ? Number(tempHours) - newDate.getHours() : newDate.getHours() - Number(tempHours));
+        newDate.setMinutes(Number(tempMins) > newDate.getMinutes() ? Number(tempMins) - newDate.getMinutes() : newDate.getMinutes() - Number(tempMins));
+        newDate.setDate(Number(tempDays) > newDate.getDate() ? Number(tempDays) - newDate.getDate() : newDate.getDate() - Number(tempDays));
+        newDate.setMonth(Number(tempMonths) > newDate.getMonth() ? Number(tempMonths) - newDate.getMonth() : newDate.getMonth() - Number(tempMonths));
+        newDate.setFullYear(Number(tempYears) > newDate.getFullYear() ? Number(tempYears) - newDate.getFullYear() : newDate.getFullYear() - Number(tempYears));
 
         const stringTitle = () =>{
             var s = [];
@@ -101,7 +101,7 @@ module.exports = class TimeInCommand extends commando.Command{
 
         const embed = new discord.RichEmbed();
         embed.setColor(0x007fed);
-        embed.setTitle('__What will it be in ' + stringTitle() + ' from now?__');
+        embed.setTitle('__What time was it ' + stringTitle() + ' ago?__');
         embed.addField("24hr Time", newDate.getHours() + ":" + calculateFullMinutes(), true);
         embed.addField("Date", (newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear(), true);
         

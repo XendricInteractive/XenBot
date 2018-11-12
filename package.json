@@ -1,11 +1,11 @@
 {
   "name": "xenbotdev",
-  "version": "1.0.14",
+  "version": "2.0.0",
   "description": "Gets game stats from Xendric Interactive games.",
   "main": "index.js",
   "scripts": {},
   "author": "MCE626#6260",
-  "license": "ISC",
+  "license": "Custom",
   "framework": "JavaScript",
   "lib": [
     "discord.js",
