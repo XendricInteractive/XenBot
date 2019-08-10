@@ -6,6 +6,7 @@ module.exports = class TimeWasCommand extends commando.Command{
         super(client, {
             name: 'timewas',
             group: 'random',
+            aliases: ['timeago'],
             memberName: 'timewas',
             description: 'What time was it *xx* hours/minutes/days/months/years (h, m, d, M, y) ago?',
             examples: ['timewas 1h 2m --> *1 hour, 2 minutes*', 'timewas 4d 2M --> *4 days, 2 months*', 'timewas 1d 5h --> *1 day, 5 hours*', 'timewas 5y 3d --> *5 years, 3 days*', 'timewas 1h 1m 1d 1M 1y --> 1 hour, 1 minute, 1 day, 1 month, 1 year'],
@@ -28,16 +29,26 @@ module.exports = class TimeWasCommand extends commando.Command{
     async run(message, args){
         // Converts the arg type of string into an array. Couldn't get the args type value to be an array from the start..
         if(message.channel instanceof discord.DMChannel)
-            args = message.content.slice('timewas'.length).trim().split(/ +/g);
-        else
-            args = message.content.slice(`${this.client.commandPrefix}`.length + 'timewas'.length).trim().split(/ +/g);
+            args = message.content.slice(7).trim().split(/ +/g); // 7 is the "timewas" string
+        else{
+            const prefix = `${this.client.commandPrefix}`;
+            const tag = '@' + `${this.client.user.id}`;
+
+            if(message.content.includes(prefix))
+                if(message.content.includes('timewas') || message.content.includes('timeago'))
+                    args = message.content.slice(prefix.length + 7).trim().split(/ +/g); // 7 is the "timewas" string
+
+            if(message.content.includes(tag))
+                if(message.content.includes('timewas') || message.content.includes('timeago'))
+                    args = message.content.slice(tag.length + 7).trim().split(/ +/g); // 7 is the "timewas" string
+        }
 
         // Go through array, and each item to find specific char
         const strHours = args.filter(s => s.includes('h')).toString();
         const strMins = args.filter(s => s.includes('m')).toString();
         const strDays = args.filter(s => s.includes('d')).toString();
         const strMonths = args.filter(s => s.includes('M')).toString();
-        const strYears =args.filter(s => s.includes('y')).toString();
+        const strYears = args.filter(s => s.includes('y')).toString();
 
         // Cut off the char to leave only number left
         if(strHours.includes('h')) var tempHours = strHours.slice(0, strHours.length-1); else var tempHours = 0;
@@ -100,11 +111,12 @@ module.exports = class TimeWasCommand extends commando.Command{
         }
 
         const embed = new discord.RichEmbed();
-        embed.setColor(message.guild.me.colorRole.hexColor);
+        if(!(message.channel instanceof discord.DMChannel))
+            embed.setColor(message.guild.me.colorRole.hexColor);
+
         embed.setTitle('__What time was it ' + stringTitle() + ' ago?__');
         embed.addField("24hr Time", newDate.getHours() + ":" + calculateFullMinutes(), true);
         embed.addField("Date", (newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear(), true);
-        
         message.channel.send({embed});
     }
 }

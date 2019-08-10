@@ -24,7 +24,7 @@ module.exports = class AboutBotCommand extends commando.Command{
         embed.setThumbnail(`${this.client.user.avatarURL}`);
         embed.setDescription("XenBot is a discord bot made by Xendric Interactive, more specifically by the lead programmer *MCE626*." + "\n\n" + "It is a bot that can take your profile stats from Xendric Interactive's games (When the time comes). For now it's just a basic bot to mess around with. *x//help* for list of commands.");
         embed.addBlankField();
-        embed.addField("Developers", "**__Xendric Interactive__**\n*MCE626* - Lead Programmer\n*Guybot1001* - Graphic Artist", true);
+        embed.addField("Developers", "**__Xendric Interactive__**\n*MCE626* - Programmer\n*Guybot1001* - Graphic Artist", true);
         embed.addField("Libraries", json.lib, true);
         embed.addField("Framework", json.framework, true);
         embed.addField("Bot Version", json.version, true);

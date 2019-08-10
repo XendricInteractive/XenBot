@@ -28,9 +28,19 @@ module.exports = class TimeInCommand extends commando.Command{
     async run(message, args){
         // Converts the arg type of string into an array. Couldn't get the args type value to be an array from the start..
         if(message.channel instanceof discord.DMChannel)
-            args = message.content.slice('timein'.length).trim().split(/ +/g);
-        else
-            args = message.content.slice(`${this.client.commandPrefix}`.length + 'timein'.length).trim().split(/ +/g);
+            args = message.content.slice(6).trim().split(/ +/g); // 6 is the "timein" string
+        else{
+            const prefix = `${this.client.commandPrefix}`;
+            const tag = '@' + `${this.client.user.id}`;
+
+            if(message.content.includes(prefix))
+                if(message.content.includes('timein'))
+                    args = message.content.slice(prefix.length + 6).trim().split(/ +/g); // 6 is the "timein" string
+
+            if(message.content.includes(tag))
+                if(message.content.includes('timein'))
+                    args = message.content.slice(tag.length + 6).trim().split(/ +/g); // 6 is the "timein" string
+        }
 
         // Go through array, and each item to find specific char
         const strHours = args.filter(s => s.includes('h')).toString();
@@ -100,11 +110,12 @@ module.exports = class TimeInCommand extends commando.Command{
         }
 
         const embed = new discord.RichEmbed();
-        embed.setColor(message.guild.me.colorRole.hexColor);
+        if(!(message.channel instanceof discord.DMChannel))
+            embed.setColor(message.guild.me.colorRole.hexColor);
+
         embed.setTitle('__What will it be in ' + stringTitle() + ' from now?__');
         embed.addField("24hr Time", newDate.getHours() + ":" + calculateFullMinutes(), true);
         embed.addField("Date", (newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear(), true);
-        
         message.channel.send({embed});
     }
 }
