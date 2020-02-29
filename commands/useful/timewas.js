@@ -5,7 +5,7 @@ module.exports = class TimeWasCommand extends commando.Command{
     constructor(client){
         super(client, {
             name: 'timewas',
-            group: 'random',
+            group: 'useful',
             aliases: ['timeago'],
             memberName: 'timewas',
             description: 'What time was it *xx* hours/minutes/days/months/years (h, m, d, M, y) ago?',

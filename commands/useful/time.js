@@ -5,7 +5,7 @@ module.exports = class TimeCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'time',
-            group: 'random',
+            group: 'useful',
             memberName: 'time',
             description: 'Gives some stats on your time.'
         });

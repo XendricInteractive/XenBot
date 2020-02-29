@@ -5,7 +5,7 @@ module.exports = class TimeInCommand extends commando.Command{
     constructor(client){
         super(client, {
             name: 'timein',
-            group: 'random',
+            group: 'useful',
             memberName: 'timein',
             description: 'What will the time be in *xx* hours/minutes/days/months/years (h, m, d, M, y) from now?',
             examples: ['timein 1h 2m --> *1 hour, 2 minutes*', 'timein 4d 2M --> *4 days, 2 months*', 'timein 1d 5h --> *1 day, 5 hours*', 'timein 5y 3d --> *5 years, 3 days*', 'timein 1h 1m 1d 1M 1y --> 1 hour, 1 minute, 1 day, 1 month, 1 year'],

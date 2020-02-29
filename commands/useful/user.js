@@ -5,7 +5,7 @@ module.exports = class AboutUserCommand extends commando.Command{
     constructor(client ){
         super(client, {
             name: 'user',
-            group: 'random',
+            group: 'useful',
             memberName: 'user',
             guildOnly: true,
             description: 'Info about a user\'s discord profile!',

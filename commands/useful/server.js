@@ -5,9 +5,14 @@ module.exports = class AboutServerCommand extends commando.Command{
     constructor(client){
         super(client, {
             name: 'server',
-            group: 'random',
+            group: 'useful',
             memberName: 'server',
             description: 'Info about the server the bot is on.',
+            args: [{
+                key: 'id',
+                prompt: 'Server Id',
+                type: 'integer'
+            }],
             throttling: {
                 usages: 2,
                 duration: 3
@@ -16,9 +21,8 @@ module.exports = class AboutServerCommand extends commando.Command{
     }
 
     async run(message, args){
-        const server = message.guild;
-        
-        if(server.available === true){
+        let server = `${this.client.guilds.get(args)}`;
+
             let icon = `${server.iconURL ? server.iconURL : "https://cdn.discordapp.com/embed/avatars/1.png"}`;
             let afkTime = server.afkTimeout / 60;
 
@@ -40,8 +44,5 @@ module.exports = class AboutServerCommand extends commando.Command{
             embed.addField("Large Server (250+ Users)", `${server.large}`, true);
 
             message.channel.send({embed});
-        } else {
-            message.channel.send("Server isn't available!");
-        }
     }
 }

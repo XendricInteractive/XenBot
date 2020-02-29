@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"log",
+				"logEmbed"
+			],
+			[
+				"new",
+				"newMsg"
+			],
+			[
+				"av",
+				"avatarUrl"
+			],
+			[
 				"use",
 				"userProfiles"
 			],
@@ -351,6 +363,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 1492,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "commands/useful/help.js",
+			"settings":
+			{
+				"buffer_size": 333,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -435,10 +465,21 @@
 	},
 	"expanded_folders":
 	[
-		"/X/Development/xenbot"
+		"/X/Development/xenbot",
+		"/X/Development/xenbot/commands",
+		"/X/Development/xenbot/commands/useful",
+		"/X/Development/xenbot/commands/xendric"
 	],
 	"file_history":
 	[
+		"/C/Users/Ziegler/Desktop/Minecraft/Moddings/LittleUtilities/1.12.2/forge/src/main/resources/assets/littleutilities/blockstates/fluid.json",
+		"/X/Development/xenbot/commands/useful/server.js",
+		"/X/Development/xenbot/commands/useful/user.js",
+		"/X/Development/xenbot/commands/useful/timewas.js",
+		"/X/Development/xenbot/commands/useful/timein.js",
+		"/X/Development/xenbot/commands/useful/time.js",
+		"/X/Development/xenbot/index.js",
+		"/X/Development/xenbot/commands/random/fg.js",
 		"/X/Development/xenbot/package.json",
 		"/X/Development/xenbot/package-lock.json",
 		"/C/Users/Ziegler/AppData/Roaming/Elgato/StreamDeck/logs/com.fredemmott.discord1.log",
@@ -449,7 +490,6 @@
 		"/C/Users/Ziegler/Desktop/Minecraft/Moddings/LittleUtilities/1.12.2/forge/src/main/resources/assets/littleutilities/lang/en_us.lang",
 		"/C/Users/Ziegler/Desktop/Minecraft/Moddings/LittleUtilities/1.12.2/forge/src/main/java/mce/lu/common/block/ModBlocks.java",
 		"/C/Users/Ziegler/Desktop/Minecraft/Moddings/LittleUtilities/1.12.2/forge/src/main/resources/assets/littleutilities/blockstates/pigment_black_fluid.json",
-		"/C/Users/Ziegler/Desktop/Minecraft/Moddings/LittleUtilities/1.12.2/forge/src/main/resources/assets/littleutilities/blockstates/fluid.json",
 		"/C/Users/Ziegler/Desktop/Minecraft/Moddings/LittleUtilities/1.12.2/forge/src/main/resources/assets/littleutilities/blockstates/pigment_red_fluid.json",
 		"/C/Users/Ziegler/Desktop/Minecraft/Moddings/LittleUtilities/1.12.2/forge/src/main/resources/assets/littleutilities/blockstates/pigment_white_fluid.json",
 		"/C/Users/Ziegler/Desktop/Minecraft/Moddings/LittleUtilities/1.12.2/forge/src/main/resources/assets/littleutilities/recipes/leather_scraps.json",
@@ -559,14 +599,7 @@
 		"/C/Users/Ziegler/Desktop/Xendric Interactive/html/Test/reactsite/src/constants.js",
 		"/C/Users/Ziegler/Desktop/Xendric Interactive/html/Test/reactsite/src/reducers.js",
 		"/C/Users/Ziegler/Desktop/Xendric Interactive/html/Test/reactsite/src/containers/App.js",
-		"/C/Users/Ziegler/Desktop/Xendric Interactive/html/Test/reactsite/src/actions.js",
-		"/C/Users/Ziegler/Desktop/Xendric Interactive/html/Test/reactsite/src/index.js",
-		"/D/Halo Online/Logs/20191001.log",
-		"/D/Halo Online/updater.exe.config",
-		"/C/Users/Ziegler/Desktop/Xendric Interactive/html/Test/reactsite/src/components/Card.js",
-		"/C/Users/Ziegler/Desktop/Xendric Interactive/html/Test/reactsite/package.json",
-		"/C/Users/Ziegler/Desktop/Xendric Interactive/GD Department/Misc/Java/BSI/src/com/mce/Main.java",
-		"/C/Users/Ziegler/Desktop/Xendric Interactive/GD Department/xenbot/.gitignore"
+		"/C/Users/Ziegler/Desktop/Xendric Interactive/html/Test/reactsite/src/actions.js"
 	],
 	"find":
 	{
@@ -601,8 +634,65 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								545,
+								545
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "commands/useful/help.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								328,
+								328
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
