@@ -11,7 +11,7 @@ Or join the bot testing discord to see what it's like before adding!
 
 XenBot is a bot made by Xendric Interactive, more specifically by the lead programmer *MCE626*. The bot is for getting user profile stats from Xendric's games (When the time comes).
 
-For now, it's just a basic random bot as MCE626 learns more javascript and coding a discord bot. This bot is coded with Discord.js and Discord.js-commando in JavaScript.
+For now, it's just a basic random bot as MCE626 learns more javascript and coding a discord bot. This bot is coded with [Discord.js](http://discord.js.org) and [Discord.js-commando](https://discord.js.org/#/docs/commando/master/general/welcome) in JavaScript.
 
 The prefix for this bot is `x//`. You can also tag the bot and do a command without the `x//`.
 
