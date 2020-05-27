@@ -44,8 +44,8 @@ Contribution to this repository means that you are granting us rights over the c
 ## You MUST
 - Maintain a visible repository of your code which is derived from or copied from this code.
 
-*A Functionally Equivalent Statement is a code fragment which, regardless of whitespace and object names, achieves the same result within the context of a discord bot. Basically you can't copy the code, rename the variables, add whitespace and say it's different. It's not.
+* A Functionally Equivalent Statement is a code fragment which, regardless of whitespace and object names, achieves the same result within the context of a discord bot. Basically you can't copy the code, rename the variables, add whitespace and say it's different. It's not.
 
 If you see something that can be improved or a bug that I (MCE626) don't know how to fix, tell me. Submit a Pull Request! One thing: Don't steal please! An enormous amount of effort and time went into this and it's not ok for someone to take this and call it their own.
 
-© 2017-2019 Xendric Interactive / MCE626
+© 2017-2020 Xendric Interactive / MCE626

@@ -22,22 +22,22 @@ bot.registry.registerGroups([
 ]).registerDefaults().registerCommandsIn(__dirname + "/commands");
 
 bot.on("messageUpdate", async(oldMsg, newMsg) =>{
-			if(oldMsg.content === newMsg.content) return;
+	if(oldMsg.content === newMsg.content) return;
 
-			let logEmbed = new discord.RichEmbed();
-			logEmbed.setAuthor(oldMsg.author.tag, oldMsg.author.avatarUrl);
-			logEmbed.setThumbnail(oldMsg.author.avatarUrl);
-			logEmbed.setColor(0x007fed);
-			logEmbed.setDescription("Message from a user was updated.");
-			logEmbed.addField("Before", oldMsg.content, true);
-			logEmbed.addField("After", newMsg.content, true);
-			logEmbed.setTimestamp();
-			logEmbed.setFooter("Embed for message updates");
+	let logEmbed = new discord.RichEmbed();
+	logEmbed.setAuthor(oldMsg.author.tag, oldMsg.author.avatarUrl);
+	logEmbed.setThumbnail(oldMsg.author.avatarUrl);
+	logEmbed.setColor(0x007fed);
+	logEmbed.setDescription("Message from a user was updated.");
+	logEmbed.addField("Before", oldMsg.content, true);
+	logEmbed.addField("After", newMsg.content, true);
+	logEmbed.setTimestamp();
+	logEmbed.setFooter("Embed for message updates");
 
-			let loggingChannel = newMsg.guild.channels.find(ch => ch.name === "dev-bot-testing");
-			if(!loggingChannel) return;
+	let loggingChannel = newMsg.guild.channels.find(ch => ch.name === "dev-bot-testing");
+	if(!loggingChannel) return;
 
-			loggingChannel.send(logEmbed);
-		});
+	loggingChannel.send(logEmbed);
+});
 
 bot.login(config.token);
