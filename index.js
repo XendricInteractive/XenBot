@@ -1,13 +1,20 @@
 const commando = require('discord.js-commando');
 const discord = require('discord.js');
 const config = require('./config.json');
+const path = require('path');
 const bot = new commando.Client({
     owner: config.owner,
     commandPrefix: 'xd//'
 });
 
 bot.on("ready", () => {
-    bot.user.setActivity("xd//help", {type: "Listening", url: "http://xendric.net/xenbot"});
+	bot.user.setPresence({
+    	status: "online",
+    	game: {
+    		name: "developing myself",
+    		type: "LISTENING"
+    	}
+    });
     console.log(`**Bot ready. ${bot.guilds.size} servers, ${bot.channels.size} channels, ${bot.users.size} users.**`);
 });
 
@@ -19,7 +26,7 @@ bot.registry.registerGroups([
 	['useful', 'Useful'],
     ['random', 'Random'],
     ['xendric', 'Xendric']
-]).registerDefaults().registerCommandsIn(__dirname + "/commands");
+]).registerDefaults().registerCommandsIn(path.join(__dirname, 'commands'));
 
 bot.on("messageUpdate", async(oldMsg, newMsg) =>{
 	if(oldMsg.content === newMsg.content) return;
